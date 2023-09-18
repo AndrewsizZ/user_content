@@ -97,9 +97,7 @@ class UserContentController extends ControllerBase {
    *   An array of the user's recent node IDs.
    */
   private function getRecentUserNodeIds($user_id) {
-    // Replace this with your logic to fetch the node IDs.
-    // You should query the database to get the desired data.
-    // Here's a placeholder example:
+
     $query = $this->entityTypeManager->getStorage('node')
       ->getQuery()
       ->accessCheck(TRUE)
