@@ -1,0 +1,5 @@
+name: 'User Content'
+type: module
+description: "Custom module to retrieve a user's authored content."
+core_version_requirement: ^10 || ^9 || ^8
+package: 'Custom'

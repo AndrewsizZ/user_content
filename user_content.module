@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function user_content_node_insert($node) {
+  $uid = $node->getOwnerId();
+  \Drupal::service('cache_tags.invalidator')->invalidateTags(["user_content:$uid"]);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function user_content_node_delete($node) {
+  $uid = $node->getOwnerId();
+  \Drupal::service('cache_tags.invalidator')->invalidateTags(["user_content:$uid"]);
+}

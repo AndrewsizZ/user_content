@@ -1,0 +1,7 @@
+user_content.user_example:
+  path: '/user-example/{user_id}'
+  defaults:
+    _controller: '\Drupal\user_content\Controller\UserContentController::getUserContent'
+    _title: 'User Content'
+  requirements:
+    _custom_access: '\Drupal\user_content\Controller\UserContentController::accessUserContent'
